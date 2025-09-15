@@ -1,0 +1,490 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+hr{
+    width:275;
+}
+/* .top-container{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+} */
+
+.overall-container{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    width:vh;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 15px;
+    box-shadow: 2px 1px 4px 4px rgba(223, 220, 220, 0.966);
+}
+header{
+    display: grid;
+    justify-content: flex-start;
+    gap: 6px;
+    align-items: center;
+}
+.lorem{
+    display: flex;
+    justify-content: flex-start;
+}
+.lorem-p{
+    display: flex;
+    justify-content: flex-start;
+    font-weight: 500;
+}
+
+
+.input-names{
+    width: 250px;
+    padding: 10px;
+    margin: 5px;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: 1px solid rgb(177, 173, 173);
+} 
+
+.email, .role, .country, .time, .domain1, .domain2, .names{
+    margin-top:20px;
+    margin-bottom: 20px;
+}
+.domain-box{
+    margin-top: 20px;
+}
+
+label{
+    margin-top: 20px;
+}
+
+.input-3{
+    display: flex;
+    justify-content: space-around;
+    gap: 60px;
+    padding: 10px;
+    width: 250px;
+    margin: 5px;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: 1px solid rgb(177, 173, 173);
+    align-items: center;
+}
+.domain-box{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.inputp{
+    display: flex;
+    padding: 10px;
+    width: 185px;
+    margin: -25px;
+    border-radius: 0 5px 5px 0;
+    border: 1px solid rgb(177, 173, 173);
+    align-items: center;
+}
+.input-1{
+    width: 100px;
+    height: 42px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(177, 173, 173);
+}
+
+.file-up{
+    margin: 16px 10px 25px 8px;
+    border-radius: 10px;
+    width: 250px;
+    height: 125px;
+    font-size: 11px;
+    display: flex;
+    justify-content: center;
+    border: 1.90px dotted grey;
+}
+span1{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+p{
+    display: flex;
+    justify-content:center;
+    align-items: flex-end;
+    font-size: 10px;
+
+}
+.upload-img{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+}
+
+.image{
+    width: 50px;
+    border-radius: 30px;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+.image-setup{
+    display: grid;
+    align-items:center;
+}
+
+
+.span2{
+    color: black;
+}
+.bio{
+    margin-top:20px;
+    margin-bottom: 20px;
+    width: 260px;
+    margin-inline: 3px;
+    height: 150px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(177, 173, 173);
+}
+
+.biography{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.submit-btn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:10px;
+    margin-top:30px;
+}
+
+button{
+    padding: 8px;
+    
+}
+
+.save-btn{
+    width: 278px;
+    background-color: rgb(4, 199, 4);
+    color: #fff;
+    border: 1px solid;
+    border-radius: 5px;
+}
+.cancel-btn{
+    width: 278px;
+    border: 1px solid rgb(209, 201, 201);
+    border-radius: 5px;
+}
+
+
+@media (min-width: 375px) and (max-width: 425px){
+    .overall-container{
+        font-size: normal;
+    }
+    label{
+        font-weight: 450;
+    }
+    hr{
+        width: 100%;
+    }
+    .input-names{
+        width: 300px;
+    }
+    .input-3{
+        width:300px;
+    }
+    .file-up{
+        width:300px;
+    }
+    .bio{
+        width: 300px;
+    }
+}
+
+
+@media(min-width:768px) and (max-width:1020px){
+    .names{
+        display: flex;
+        align-items:flex-start;
+        gap: 150px;
+    }
+    .change-labels{
+        margin-top:10px;
+    }
+    .input-names{
+        width: 160px;
+    }
+    .email{
+        display: flex;
+        align-items: flex-start;
+        gap: 85px;
+        
+    }
+    .input-3{
+        width: 355px;
+    }
+    .inputp{
+        width: 285px;
+    }
+    .picture{
+        display: flex;
+        align-items: center;
+        gap: 58px;
+    }
+    .image{
+        width: 50px;
+        border-radius: 30px;
+        margin-top: 15px;
+    }
+    .image-setup{
+        display: flex;
+        align-items: flex-start;
+    }
+    .file-up{
+        margin: 15px 22px 15px 21px;
+        border-radius: 10px;
+        width: 285px;
+        height: 150px;
+        font-size: 11px;
+        display: flex;
+        justify-content: center;
+        border: 1.90px dotted grey;
+    }
+    .Role{
+        display: flex;
+        align-items: center;
+        gap: 170px;
+    }
+
+    .country{
+        display: flex;
+        align-items: flex-start;
+        gap: 140px;
+
+    }
+    .time{
+       display: flex;
+        align-items: flex-start;
+        gap: 128px;
+    }
+    .domain1{
+       display: flex;
+        align-items: flex-start;
+        gap: 143px;
+    }
+    .domain2{
+        display: flex;
+        align-items: flex-start;
+        gap: 143px;
+    }
+    .biography{
+        display: flex;
+        align-items: flex-start;
+        gap: 68px;
+    }
+    .bio{
+        width: 360px;
+    }
+
+    hr{
+        width: 100%;
+        color: rgb(200, 200, 201);
+        opacity: 0.5;
+    }
+    label{
+        font-weight: 450;
+    }
+    .submit-btn{
+    width: 715px;
+    display:flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    margin-top:30px;
+}
+
+    button{
+        padding: 8px;
+    }
+
+    .save-btn{
+        width: 85px;
+        background-color: rgb(4, 199, 4);
+        color: #fff;
+        border: 1px solid;
+        border-radius: 5px;
+    }
+    .cancel-btn{
+        width: 85px;
+        border: 1px solid rgb(209, 201, 201);
+        border-radius: 5px;
+    }
+    .hr-tag{
+        width: 530%;
+    }
+
+}
+
+
+@media(min-width:1024px){
+  
+.overall-container{
+    display: grid;
+    justify-content: flex-start;
+    flex-direction: row;
+    padding: 20px;
+    
+    border: 1px solid white;
+    border-radius: 15px;
+    box-shadow: 2px 1px 4px 4px rgba(223, 220, 220, 0.966);
+}  
+.names{
+    display: flex;
+    align-items: center;
+    gap: 250px;
+}
+.email{
+    display: flex;
+    align-items: center;
+    gap: 98px;
+}
+.Role{
+    display: flex;
+    align-items: center;
+    gap: 98px;
+}
+.country{
+    display: flex;
+    align-items: center;
+    gap: 98px;
+}
+.time{
+    display: flex;
+    align-items: center;
+    gap: 98px;
+}
+.domain1{
+    display: flex;
+    align-items: center;
+    gap: 98px;
+}
+.domain2{
+    display: flex;
+    align-items: center;
+    gap: 98px;
+}
+.fixed-labels{
+    width: 200px;
+}
+.input-names{
+    width: 250px;
+}
+
+.inputp{
+    width: 463px;
+}
+
+.input-3{
+    width: 532px;
+}
+.picture{
+    display: flex;
+    align-items: center;
+    gap: 158px;
+}
+.image{
+    width: 50px;
+    border-radius: 30px;
+    margin-top: 30px;
+}
+.image-setup{
+    display: flex;
+    align-items: flex-start;
+}
+
+.file-up{
+    margin: 15px 22px 15px 21px;
+    border-radius: 10px;
+    width: 472px;
+    height: 150px;
+    font-size: 11px;
+    display: flex;
+    justify-content: center;
+    border: 1.90px dotted grey;
+}
+
+.biography{
+
+    display: flex;
+    align-items: center;
+    gap: 179px;
+}
+.bio{
+    width: 532px;
+}
+label{
+    font-weight: 450;
+}
+hr{
+    width: 100%;
+    color: rgb(200, 200, 201);
+    opacity: 0.5;
+}
+.hr-tag{
+    width: 695%;
+    color: rgb(200, 200, 201);
+    opacity: 0.5;
+}
+.lorem-p{
+    display: flex;
+    width: 125px;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-weight: 500;
+}
+
+.submit-btn{
+    width: 950px;
+    display:flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    margin-top:30px;
+}
+
+button{
+    padding: 8px;
+}
+
+.save-btn{
+    width: 85px;
+    background-color: rgb(4, 199, 4);
+    color: #fff;
+    border: 1px solid;
+    border-radius: 5px;
+}
+.cancel-btn{
+    width: 85px;
+    border: 1px solid rgb(209, 201, 201);
+    border-radius: 5px;
+}
+}
+
+
+@media(min-width:1025px){
+    hr{
+        width: 135%;
+    }
+    .hr-tag{
+        width: 935%;
+    }
+}
