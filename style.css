@@ -10,40 +10,40 @@
 }
 
 hr{
-    width:275;
+    width:100%;
 }
-/* .top-container{
-    display: grid;
-    align-items: center;
-    justify-content: center;
-} */
 
 .overall-container{
     display: flex;
     flex-direction: column;
     margin: 10px;
-    width:vh;
     padding: 10px;
     border: 1px solid white;
     border-radius: 15px;
     box-shadow: 2px 1px 4px 4px rgba(223, 220, 220, 0.966);
 }
-header{
-    display: grid;
-    justify-content: flex-start;
-    gap: 6px;
-    align-items: center;
-}
+
+ header{
+    margin-bottom:15px;
+} 
+
 .lorem{
     display: flex;
     justify-content: flex-start;
+    width: 137px;
 }
+
+h4{
+    display: flex;
+    justify-content: flex-start;
+    width:130px;
+}
+
 .lorem-p{
     display: flex;
     justify-content: flex-start;
     font-weight: 500;
 }
-
 
 .input-names{
     width: 250px;
@@ -58,6 +58,7 @@ header{
     margin-top:20px;
     margin-bottom: 20px;
 }
+
 .domain-box{
     margin-top: 20px;
 }
@@ -78,11 +79,13 @@ label{
     border: 1px solid rgb(177, 173, 173);
     align-items: center;
 }
+
 .domain-box{
     display: flex;
     align-items: center;
     margin-bottom: 20px;
 }
+
 .inputp{
     display: flex;
     padding: 10px;
@@ -92,6 +95,7 @@ label{
     border: 1px solid rgb(177, 173, 173);
     align-items: center;
 }
+
 .input-1{
     width: 100px;
     height: 42px;
@@ -110,19 +114,14 @@ label{
     justify-content: center;
     border: 1.90px dotted grey;
 }
-span1{
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} 
 p{
     display: flex;
     justify-content:center;
     align-items: flex-end;
     font-size: 10px;
-
 }
+
 .upload-img{
     display: flex;
     flex-direction: column;
@@ -136,15 +135,16 @@ p{
     margin-top: 30px;
     margin-left: 20px;
 }
+
 .image-setup{
     display: grid;
     align-items:center;
 }
 
-
 .span2{
     color: black;
 }
+
 .bio{
     margin-top:20px;
     margin-bottom: 20px;
@@ -164,29 +164,28 @@ p{
 .submit-btn{
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap:10px;
-    margin-top:30px;
+    margin-top:3px;
+    margin-bottom: -3px;
 }
 
 button{
-    padding: 8px;
-    
+    padding: 8px;    
 }
 
 .save-btn{
-    width: 278px;
+    width: 268px;
     background-color: rgb(4, 199, 4);
     color: #fff;
     border: 1px solid;
     border-radius: 5px;
 }
+
 .cancel-btn{
-    width: 278px;
+    width:268px;
     border: 1px solid rgb(209, 201, 201);
     border-radius: 5px;
 }
-
 
 @media (min-width: 375px) and (max-width: 425px){
     .overall-container{
@@ -210,26 +209,57 @@ button{
     .bio{
         width: 300px;
     }
+    .save-btn{
+        width: 305px;
+        background-color: rgb(4, 199, 4);
+        color: #fff;
+        border: 1px solid;
+        border-radius: 5px;
+    }
+    .cancel-btn{
+        width:305px;
+        border: 1px solid rgb(209, 201, 201);
+        border-radius: 5px;
+    }
+    .hr-tag{
+        width: 240%;
+    }
 }
 
 
 @media(min-width:768px) and (max-width:1020px){
-    .names{
+    .overall-container{
+        display: grid;
+        justify-content: flex-start;
+        flex-direction: column;
+        padding: 20px;
+        border: 1px solid white;
+        border-radius: 15px;
+        box-shadow: 2px 1px 4px 4px rgba(223, 220, 220, 0.966);    
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        position: sticky;
+        top: 15px;
+        padding: 5px;
+        border: 1px solid lightgray;
+        border-radius: 10px;
+        background-color: #ffffff;
+    }
+    
+    .names, .email, .role, .country, .time, .biography{
         display: flex;
         align-items:flex-start;
-        gap: 150px;
+        justify-content: space-between;
+        width: 530px;
     }
     .change-labels{
         margin-top:10px;
     }
     .input-names{
-        width: 160px;
-    }
-    .email{
-        display: flex;
-        align-items: flex-start;
-        gap: 85px;
-        
+        width: 168px;
     }
     .input-3{
         width: 355px;
@@ -240,7 +270,8 @@ button{
     .picture{
         display: flex;
         align-items: center;
-        gap: 58px;
+        justify-content: space-between;
+        width: 548px;
     }
     .image{
         width: 50px;
@@ -261,60 +292,32 @@ button{
         justify-content: center;
         border: 1.90px dotted grey;
     }
-    .Role{
-        display: flex;
-        align-items: center;
-        gap: 170px;
-    }
-
-    .country{
-        display: flex;
-        align-items: flex-start;
-        gap: 140px;
-
-    }
-    .time{
+   
+    .domain1, .domain2{
        display: flex;
         align-items: flex-start;
-        gap: 128px;
-    }
-    .domain1{
-       display: flex;
-        align-items: flex-start;
-        gap: 143px;
-    }
-    .domain2{
-        display: flex;
-        align-items: flex-start;
-        gap: 143px;
-    }
-    .biography{
-        display: flex;
-        align-items: flex-start;
-        gap: 68px;
+        /* gap: 143px; */
+        justify-content: space-between;
+        width: 500px;
     }
     .bio{
         width: 360px;
     }
 
     hr{
-        width: 100%;
+        width: 75%;
         color: rgb(200, 200, 201);
-        opacity: 0.5;
+        opacity: 0.3;
     }
     label{
         font-weight: 450;
     }
     .submit-btn{
-    width: 715px;
-    display:flex;
-    justify-content: flex-end;
-    flex-direction: row;
-    margin-top:30px;
-}
-
-    button{
-        padding: 8px;
+        width: 500px;
+        display:flex;
+        justify-content: flex-end;
+        flex-direction: row; 
+        margin: 0;
     }
 
     .save-btn{
@@ -330,64 +333,56 @@ button{
         border-radius: 5px;
     }
     .hr-tag{
-        width: 530%;
+        width: 522%;
     }
-
+    .personal-frm{
+        width: 200px;
+    }
 }
 
-
 @media(min-width:1024px){
-  
+
+header{
+    transform: translateY(10%); 
+    transition: transform 0.3s ease-in-out;
+}
+
 .overall-container{
-    display: grid;
+    display: flex;
     justify-content: flex-start;
-    flex-direction: row;
+    flex-direction: column;
     padding: 20px;
-    
     border: 1px solid white;
     border-radius: 15px;
     box-shadow: 2px 1px 4px 4px rgba(223, 220, 220, 0.966);
 }  
-.names{
+
+.header-tag{
     display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 250px;
 }
-.email{
+
+.names, .Role, .country, .email, .time,.biography, .picture{
     display: flex;
-    align-items: center;
-    gap: 98px;
+    align-items:flex-start;
+    justify-content: space-between;
+    width: 845px;
 }
-.Role{
+
+.domain1, .domain2{
     display: flex;
-    align-items: center;
-    gap: 98px;
+    align-items:flex-start;
+    justify-content: space-between;
+    width: 820px;
 }
-.country{
-    display: flex;
-    align-items: center;
-    gap: 98px;
-}
-.time{
-    display: flex;
-    align-items: center;
-    gap: 98px;
-}
-.domain1{
-    display: flex;
-    align-items: center;
-    gap: 98px;
-}
-.domain2{
-    display: flex;
-    align-items: center;
-    gap: 98px;
-}
-.fixed-labels{
+
+.fine-labels{
     width: 200px;
 }
+
 .input-names{
-    width: 250px;
+    width: 260px;
 }
 
 .inputp{
@@ -395,18 +390,21 @@ button{
 }
 
 .input-3{
-    width: 532px;
+    width: 535px;
 }
+
 .picture{
     display: flex;
     align-items: center;
-    gap: 158px;
+    gap: 16%;
 }
+
 .image{
     width: 50px;
     border-radius: 30px;
     margin-top: 30px;
 }
+
 .image-setup{
     display: flex;
     align-items: flex-start;
@@ -415,7 +413,7 @@ button{
 .file-up{
     margin: 15px 22px 15px 21px;
     border-radius: 10px;
-    width: 472px;
+    width: 492px;
     height: 150px;
     font-size: 11px;
     display: flex;
@@ -423,28 +421,29 @@ button{
     border: 1.90px dotted grey;
 }
 
-.biography{
-
-    display: flex;
-    align-items: center;
-    gap: 179px;
-}
 .bio{
     width: 532px;
 }
 label{
     font-weight: 450;
 }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        position: sticky;
+        top: 15px;
+        padding: 10px;
+        border: 1px solid lightgray;
+        border-radius: 10px;
+        background-color: #ffffff;
+    }
 hr{
-    width: 100%;
-    color: rgb(200, 200, 201);
-    opacity: 0.5;
+    width: 85%;
+    color: rgb(182, 182, 184);
+    opacity: 0.3;
 }
-.hr-tag{
-    width: 695%;
-    color: rgb(200, 200, 201);
-    opacity: 0.5;
-}
+
 .lorem-p{
     display: flex;
     width: 125px;
@@ -454,11 +453,10 @@ hr{
 }
 
 .submit-btn{
-    width: 950px;
+    width: 825px;
     display:flex;
     justify-content: flex-end;
     flex-direction: row;
-    margin-top:30px;
 }
 
 button{
@@ -470,21 +468,14 @@ button{
     background-color: rgb(4, 199, 4);
     color: #fff;
     border: 1px solid;
-    border-radius: 5px;
+    border-radius: 5px;    
 }
+
 .cancel-btn{
     width: 85px;
     border: 1px solid rgb(209, 201, 201);
     border-radius: 5px;
 }
+
 }
 
-
-@media(min-width:1025px){
-    hr{
-        width: 135%;
-    }
-    .hr-tag{
-        width: 935%;
-    }
-}
