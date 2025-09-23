@@ -8,35 +8,43 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=upload"
     />
+    
   </head>
   <body>
-    <!-- <div class="top-container"> -->
       <div class="overall-container">
         <header>
                 <div class="personal-frm">
                     <h4>Personal info</h4>
                     <p class="lorem">Lorem ipsum dolor sit amet</p>
                 </div>
-            <div class="submit-btn">
-              <button class="cancel-btn">cancel</button>
-              <button class="save-btn">save</button>
-            </div>
         </header> 
         <hr>
         <section>
-          <form action="" id="form-container">
+          <form action="" id="form">
             <div class="names">
               <label for="name" class="change-labels">Name</label>
-              <div>
-                <input type="text" class="input-names" placeholder="John" />
-                <input type="text" class="input-names" placeholder="Doe" />
+              <div class="names-inp">
+ 
+                <input type="text" class="input-names"  id="fname" placeholder="John"  />
+                <div id="error-name"></div>
+                <input type="text" class="input-names" id="lname" placeholder="Doe" />
+                <div id="error-lname"></div>
+                
               </div>
+              
             </div>
-            <hr />
+           
+            <hr/>
             <div class="email">
+              <div class="email-container">
               <label for="email" class="fine-labels">Email address</label>
-              <input type="text" class="input-3" placeholder="johndoe@flex.c" />
+              <input type="email" class="inputcontrol" id="email-inp" placeholder="johndoe@flex.c" />
+              </div>
+
+              
+                
             </div>
+            <div id="error-email"></div>
             <hr />
             <div class="picture">
               <div>
@@ -45,13 +53,12 @@
               </div>
 
               <div class="image-setup">
-                <img src="images/profile.jpg" alt="" class="image" />
-
+                <img src="images/profile.jpg" alt="" class="image" id="profile-pic" />
                 <div class="file-up">
                   <div class="upload-img">
-                    <span
+                    <input type="file" class="upload-btn" id="picture-inp" accept="image/jpeg, image/png, image/jpg"><span
                       class="material-symbols-outlined"
-                      style="color: rgb(29, 211, 29)"
+                      style="color: rgb(29, 211, 29);"
                       >upload</span
                     >
                     <div class="span1" style="color: rgb(4, 199, 4)">
@@ -59,8 +66,8 @@
                       <span style="font-weight: 500; color: black"
                         >or drag and drop</span
                       >
+                      
                     </div>
-                    <!-- <div class="span2"></div> -->
                     <div class="span3">
                       <p class="para" style="color: grey">
                         PNG, JPG, GIF or up to 10MB
@@ -70,31 +77,36 @@
                 </div>
               </div>
             </div>
-            <hr />
+            <div class="error-pic"></div>
+            <hr/>
 
             <div class="Role">
               <label for="role" class="fine-labels">Role</label>
               <input
                 type="text"
-                class="input-3"
-                placeholder="Frontend Developer"
-              />
+                class="inputcontrol"
+                placeholder="Frontend Developer" id="role-inp"/>
             </div>
+            <div id="error-role"></div>
             <hr />
             <div class="country">
               <label for="country" class="fine-labels">Country</label>
-              <select name="country" id="city" class="input-3">
+              <select name="country" id="city" class="inputcontrol">
+                <option value=""></option>
                 <option value="United States">United States</option>
                 <option value="India">India</option>
                 <option value="Russia">Russia</option>
                 <option value="Europe">Europe</option>
               </select>
+              
             </div>
+            <div id="error-country"></div>
             <hr />
 
             <div class="time">
               <label for="Time" class="fine-labels">Timezone</label>
-              <select name="timer" id="time" class="input-3">
+              <select name="timer" id="time" class="inputcontrol">
+                <option value=""></option>
                 <option value="timer">
                   Central Daylight Time (GMT-5) UTC-08.00
                 </option>
@@ -105,13 +117,15 @@
                   Central Daylight Time (GMT-5) UTC-09.00
                 </option>
               </select>
+              
             </div>
+            <div id="error-time"></div>
             <hr />
 
             <div class="domain1">
               <label for="domain" class="fine-labels">Domain</label>
               <div class="domain-box">
-                <input type="text" class="input-1" placeholder="https://" />
+                <input type="text" class="input-1" id="domain-boxer"placeholder="https://" />
                 <input
                   type="text"
                   class="inputp"
@@ -120,11 +134,17 @@
                 />
               </div>
             </div>
+            <div id="error-ftdomain"></div>
             <hr />
+
+
+
+
+
             <div class="domain2">
-              <label for="domain" class="fine-labels">Domain</label>
+              <label for="domain" class="fine-labels">Custom domain</label>
               <div class="domain-box">
-                <input type="text" class="input-1" placeholder="flex.co/" />
+                <input type="text" class="input-1" id="domain-boxer2"placeholder="https://" />
                 <input
                   type="text"
                   class="inputp"
@@ -133,18 +153,23 @@
                 />
               </div>
             </div>
+            <div id="error-stdomain"></div>
             <hr />
             <div class="biography">
               <div>
                 <label for="bio" class="bio-1">Bio</label>
                 <p class="lorem-p">Lorem ipsum dolor sit amet</p>
               </div>
-
-              <input type="text" class="bio" />
+              <input type="text" class="bio" id="biograph" placeholder="Type here"/>
+            </div>
+            <div id="error-bio"></div>
+            <div class="submit-btn">
+              <button class="cancel-btn"  type="reset" id="cancel">cancel</button>
+              <button class="save-btn" type="submit" id="save">save</button>
             </div>
           </form>
         </section>
       </div>
-    <!-- </div> -->
+      <script src="main.js"></script>  
   </body>
 </html>

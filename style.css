@@ -32,7 +32,6 @@ hr{
     justify-content: flex-start;
     width: 137px;
 }
-
 h4{
     display: flex;
     justify-content: flex-start;
@@ -48,7 +47,7 @@ h4{
 .input-names{
     width: 250px;
     padding: 10px;
-    margin: 5px;
+    margin-left: 15px;
     margin-top: 20px;
     border-radius: 5px;
     border: 1px solid rgb(177, 173, 173);
@@ -67,13 +66,15 @@ label{
     margin-top: 20px;
 }
 
-.input-3{
+
+
+.inputcontrol{
     display: flex;
     justify-content: space-around;
     gap: 60px;
     padding: 10px;
     width: 250px;
-    margin: 5px;
+    margin-left: 15px;
     margin-top: 20px;
     border-radius: 5px;
     border: 1px solid rgb(177, 173, 173);
@@ -86,10 +87,12 @@ label{
     margin-bottom: 20px;
 }
 
-.inputp{
+.inputp {
     display: flex;
-    padding: 10px;
+    padding: 7px;
     width: 185px;
+    height: 41px;
+    /* margin-left: 15px; */
     margin: -25px;
     border-radius: 0 5px 5px 0;
     border: 1px solid rgb(177, 173, 173);
@@ -98,8 +101,9 @@ label{
 
 .input-1{
     width: 100px;
-    height: 42px;
+    height: 41px;
     padding: 10px;
+    margin-left:10px;
     border-radius: 5px;
     border: 1px solid rgb(177, 173, 173);
 }
@@ -113,6 +117,7 @@ label{
     display: flex;
     justify-content: center;
     border: 1.90px dotted grey;
+    cursor: pointer;
 }
 
 p{
@@ -147,7 +152,6 @@ p{
 
 .bio{
     margin-top:20px;
-    margin-bottom: 20px;
     width: 260px;
     margin-inline: 3px;
     height: 150px;
@@ -179,15 +183,48 @@ button{
     color: #fff;
     border: 1px solid;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .cancel-btn{
     width:268px;
     border: 1px solid rgb(209, 201, 201);
     border-radius: 5px;
+    cursor: pointer;    
 }
 
-@media (min-width: 375px) and (max-width: 425px){
+
+.upload-btn {
+    position: relative;
+    top: 20px;
+    width: 20px;
+    border-radius: 20px;
+    opacity: 0;
+}
+
+
+#error-name, #error-lname, #error-email, #error-role, #error-country, #error-time, #error-bio, #error-bio, #error-ftdomain, #error-stdomain{
+    margin-top: 10px;
+    font-size: 10px;
+    color: red;
+    padding-inline: 17px;
+}
+
+
+
+
+
+/* .inputcontrol{
+    border-color: rgb(30, 204, 30);
+} */
+
+/* .inputcontrol{
+    border-color: #ff3860;
+} */
+
+
+
+@media (min-width: 375px) and (max-width: 426px){
     .overall-container{
         font-size: normal;
     }
@@ -200,7 +237,7 @@ button{
     .input-names{
         width: 300px;
     }
-    .input-3{
+    .inputcontrol{
         width:300px;
     }
     .file-up{
@@ -232,44 +269,62 @@ button{
 
 @media(min-width:768px) and (max-width:1020px){
     .overall-container{
-        display: grid;
-        justify-content: flex-start;
-        flex-direction: column;
-        padding: 20px;
-        border: 1px solid white;
-        border-radius: 15px;
-        box-shadow: 2px 1px 4px 4px rgba(223, 220, 220, 0.966);    
-    }
+        display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 20px;
+    padding-top: 0;
+    height: 97vh;
+    border: 1px solid white;
+    border-radius: 15px;
+    box-shadow: 2px 1px 4px 4px rgba(223, 220, 220, 0.966);
+}  
 
     header {
         display: flex;
         justify-content: space-between;
         position: sticky;
         top: 15px;
-        padding: 5px;
+        width: 100%;
+        padding: 10px;
         border: 1px solid lightgray;
         border-radius: 10px;
         background-color: #ffffff;
     }
     
+    section{
+        scroll-behavior: smooth;
+        overflow:auto;
+        scrollbar-width: none;
+    }
+
+    .fine-labels{
+        width: 150px;
+    }
+
     .names, .email, .role, .country, .time, .biography{
         display: flex;
         align-items:flex-start;
         justify-content: space-between;
-        width: 530px;
+        width: 550px;
     }
+    
+   
+
     .change-labels{
         margin-top:10px;
     }
     .input-names{
-        width: 168px;
+        width: 355px;
     }
-    .input-3{
+    .inputcontrol{
         width: 355px;
     }
     .inputp{
         width: 285px;
+        margin-right: -54px;
     }
+
     .picture{
         display: flex;
         align-items: center;
@@ -295,11 +350,18 @@ button{
         justify-content: center;
         border: 1.90px dotted grey;
     }
+    #email-inp{
+        width: 350px;
+    }
+
+    .email-container{
+        display:flex;
+        gap: 32px;
+    }
    
     .domain1, .domain2{
        display: flex;
         align-items: flex-start;
-        /* gap: 143px; */
         justify-content: space-between;
         width: 500px;
     }
@@ -315,12 +377,14 @@ button{
     label{
         font-weight: 450;
     }
-    .submit-btn{
-        width: 500px;
-        display:flex;
+    .submit-btn {
+        width: 93%;
+        display: flex;
         justify-content: flex-end;
-        flex-direction: row; 
-        margin: 0;
+        flex-direction: row;
+        position: fixed;
+        top: 25px;
+        right: 38px;
     }
 
     .save-btn{
@@ -355,6 +419,8 @@ header{
     justify-content: flex-start;
     flex-direction: column;
     padding: 20px;
+    padding-top: 0;
+    height: 97vh;
     border: 1px solid white;
     border-radius: 15px;
     box-shadow: 2px 1px 4px 4px rgba(223, 220, 220, 0.966);
@@ -366,6 +432,33 @@ header{
     align-items: center;
 }
 
+section{
+    scroll-behavior: smooth;
+    overflow:auto;
+    scrollbar-width: none;
+}
+
+
+#error-name, #error-lname{
+    margin-top: 10px;
+    font-size: 10px;
+    color: red;
+    display: flex;
+    padding-inline: 29px;
+}
+
+
+
+
+ #error-email, #error-role, #error-country, #error-time, #error-bio, #error-bio, #error-ftdomain, #error-stdomain{
+    margin-top: 10px;
+    font-size: 10px;
+    color: red;
+    display: flex;
+    padding-inline: 345px;
+ }
+
+
 .names, .Role, .country, .email, .time,.biography, .picture{
     display: flex;
     align-items:flex-start;
@@ -373,10 +466,16 @@ header{
     width: 845px;
 }
 
+.email-container{
+    display:flex;
+    gap: 115px;
+}
+
+
 .domain1, .domain2{
     display: flex;
     align-items:flex-start;
-    justify-content: space-between;
+    gap:125px;
     width: 820px;
 }
 
@@ -385,21 +484,30 @@ header{
 }
 
 .input-names{
-    width: 260px;
+    width: 515px;
 }
 
 .inputp{
-    width: 463px;
+    width: 444px;
 }
 
-.input-3{
-    width: 535px;
+.inputcontrol{
+    width: 517px;
+}
+
+.inputcontrol{
+    display: flex;
+    flex-direction: column;
+
 }
 
 .picture{
     display: flex;
     align-items: center;
     gap: 16%;
+}
+.span1, .para{
+    font-size: 15px;
 }
 
 .image{
@@ -431,16 +539,18 @@ label{
     font-weight: 450;
 }
 
-    header {
-        display: flex;
-        justify-content: space-between;
-        position: sticky;
-        top: 15px;
-        padding: 10px;
-        border: 1px solid lightgray;
-        border-radius: 10px;
-        background-color: #ffffff;
-    }
+header {
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 15px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
 hr{
     width: 85%;
     color: rgb(182, 182, 184);
@@ -455,11 +565,14 @@ hr{
     font-weight: 500;
 }
 
-.submit-btn{
-    width: 825px;
-    display:flex;
+.submit-btn {
+    width: 93%;
+    display: flex;
     justify-content: flex-end;
     flex-direction: row;
+    position: fixed;
+    top: 30px;
+    right: 38px;
 }
 
 button{
@@ -481,4 +594,5 @@ button{
 }
 
 }
+
 
